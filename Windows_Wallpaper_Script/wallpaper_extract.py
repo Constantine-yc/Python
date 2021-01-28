@@ -1,13 +1,14 @@
 import os
 import shutil
 import time
+
 from PIL import Image
 
 
 class Wallpaper:
     # Set Environment Variables
     username = os.environ['USERNAME']
-
+#An Amazing Code You Will Love To Have 
     # All file urls
     file_urls = {
         "wall_src": "C:\\Users\\" + username
@@ -75,6 +76,7 @@ class Wallpaper:
                     os.remove(w.file_urls["wall_dst"] + filename)
                 else:
                     im.close()
+
     # Arrange the wallpapers into the corresponding folders
     @staticmethod
     def arr_desk_wallpapers():
@@ -108,7 +110,7 @@ class Wallpaper:
         w.extract_wall()
         w.arr_desk_wallpapers()
         print(w.msg)
-        time.sleep(3)
+        time.sleep(2)
 
 
 wall = Wallpaper()
